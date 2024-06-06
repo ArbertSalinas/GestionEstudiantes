@@ -7,33 +7,39 @@
 <VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlGestion">
     <children>
         <HBox spacing="10">
-           <children>
-               <VBox spacing="5">
-                  <children>
-                      <Label fx:id="lblNombre" text="Nombre:" />
-                      <TextField fx:id="txtNombre" />
-                      <Label fx:id="lblApellido" text="Apellido:" />
-                      <TextField fx:id="txtApellido" />
-                      <Label fx:id="lblEdad" text="Edad:" />
-                      <TextField fx:id="txtEdad" />
-                      <Label fx:id="lblCodigo" text="Código:" />
-                      <TextField fx:id="txtCodigo" />
-                      <Button fx:id="btnAgregar"
-onAction="#addEstudiante" text="Agregar Estudiante" />
-                  </children>
-               </VBox>
-               <VBox spacing="5">
-                  <children>
-                      <Label fx:id="lblBuscar" text="Buscar Estudiante por Código:" />
-                      <TextField fx:id="txtBuscar" />
-                      <Button fx:id="btnBuscar" onAction="#buscarEstudiante" text="Buscar" />
-                      <Label fx:id="lblResultados" text="Resultados de la Búsqueda:" />
-                      <TextArea fx:id="txtResultados" editable="false" />
-                  </children>
-               </VBox>
-           </children>
+            <children>
+                <VBox spacing="5">
+                    <children>
+                        <Label fx:id="lblNombre" text="Nombre:" />
+                        <TextField fx:id="txtNombre" />
+                        <Label fx:id="lblApellido" text="Apellido:" />
+                        <TextField fx:id="txtApellido" />
+                        <Label fx:id="lblEdad" text="Edad:" />
+                        <TextField fx:id="txtEdad" />
+                        <Label fx:id="lblCodigo" text="Código:" />
+                        <TextField fx:id="txtCodigo" />
+                        <Button fx:id="btnAgregar" onAction="#addEstudiante" text="Agregar Estudiante" />
+                    </children>
+                </VBox>
+                <VBox spacing="5">
+                    <children>
+                        <Label fx:id="lblBuscar" text="Buscar Estudiante por Código:" />
+                        <TextField fx:id="txtBuscar" />
+                        <Button fx:id="btnBuscar" onAction="#buscarEstudiante" text="Buscar" />
+                        <Label fx:id="lblResultados" text="Resultados de la Búsqueda:" />
+                        <TextArea fx:id="txtResultados" editable="false" />
+                    </children>
+                </VBox>
+            </children>
         </HBox>
         <Button fx:id="btnlistarEstudiantes" onAction="#listarEstudiantes" text="Listar Estudiantes" />
-        <TextArea fx:id="txtlistaEstudiantes" editable="false" />
+        <TableView fx:id="tblEstudiantes">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" />
+                <TableColumn fx:id="colApellido" text="Apellido" />
+                <TableColumn fx:id="colEdad" text="Edad" />
+                <TableColumn fx:id="colCodigo" text="Código" />
+            </columns>
+        </TableView>
     </children>
 </VBox>
