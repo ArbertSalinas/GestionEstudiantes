@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class Gestion {
-    private List<Estudiante> listaEstudiantes;
+    public List<Estudiante> listaEstudiantes;
 
     public Gestion() {
             listaEstudiantes = new ArrayList<Estudiante>();
@@ -18,7 +18,6 @@ public class Gestion {
     
     public void agregarEstudiante(Estudiante estudiante) {
         this.listaEstudiantes.add(estudiante);
-        System.out.println("Estudiante agregado correctamente.");
     }
 
     public void listarEstudiantes() {
@@ -27,7 +26,7 @@ public class Gestion {
         } else {
             System.out.println("Lista de Estudiantes:");
             for (Estudiante estudiante : listaEstudiantes) {
-                System.out.println(estudiante);
+                System.out.println(estudiante.toString());
             }
         }
     }
